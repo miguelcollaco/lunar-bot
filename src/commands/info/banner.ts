@@ -27,7 +27,8 @@ module.exports = new Command({
                 description: emojis.bp + `${user.mention} has no banner!`,
                 color: color,
             }
-            return await interaction.createMessage({ embeds: [embed], flags: MessageFlags.EPHEMERAL });
+            await interaction.createMessage({ embeds: [embed], flags: MessageFlags.EPHEMERAL });
+            return;
         }
 
         let formats: string[] = [];

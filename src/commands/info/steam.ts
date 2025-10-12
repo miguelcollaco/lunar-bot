@@ -34,7 +34,8 @@ module.exports = new Command({
 						description: emojis.bp + `Invalid custom URL! (\`${value}\`)`,
 						color: color,
 					};
-					return await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					return;
 				}
 				value = res.steamid;
 				break;
@@ -44,7 +45,8 @@ module.exports = new Command({
 						description: emojis.bp + `Invalid SteamID64! (\`${value}\`)`,
 						color: color,
 					};
-					return await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					return;
 				}
 				break;
 			case "steamid":
@@ -53,7 +55,8 @@ module.exports = new Command({
 						description: emojis.bp + `Invalid SteamID! (\`${value}\`)`,
 						color: color,
 					};
-					return await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					return;
 				} else
 					value = toSteamID64(value);
 				break
@@ -63,7 +66,8 @@ module.exports = new Command({
 						description: emojis.bp + `Invalid SteamID3! (\`${value}\`)`,
 						color: color,
 					};
-					return await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					await interaction.createMessage({embeds: [embed], flags: MessageFlags.EPHEMERAL});
+					return;
 				} else
 					value = toSteamID64(fromSteamID3(value));
 				break;
