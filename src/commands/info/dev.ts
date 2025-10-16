@@ -16,7 +16,7 @@ module.exports = new Command({
             fields: [
                 { inline: true, name: emojis.bp + "Discord", value: "<@391706038698508299>"},
                 { inline: true, name: emojis.bp + "Steam", value: "[(Click Here)](http://steamcommunity.com/profiles/76561198985255524)"},
-                { inline: true, name: emojis.bp + "Website", value: "[(Click Here)](https://miguelcollaco.github.io)"}
+                { inline: true, name: emojis.bp + "Website", value: "[(Click Here)](https://miguelcollaco.com)"}
             ],
             color: color,
         }
