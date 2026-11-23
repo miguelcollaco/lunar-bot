@@ -28,28 +28,27 @@ To add a command, create a file in a category folder that exports a `Command`. I
 
 ## Setup
 
-You'll need Node.js 18 or later and a [Discord application](https://discord.com/developers/applications) with a bot user. In the Developer Portal, enable the **Server Members** and **Message Content** intents.
+You'll need Node.js 18.13 or later and a [Discord application](https://discord.com/developers/applications) with a bot user. In the Developer Portal, enable the **Server Members** and **Message Content** intents.
 
 1. Install the dependencies:
 
    ```sh
-   npm install
+   pnpm install
    ```
 
-2. Create a `.env` file in the project root:
+2. Copy `.env.example` to `.env` and fill in the values:
 
    ```sh
-   TOKEN=your-discord-bot-token
-   STEAM_API_KEY=your-steam-web-api-key
+   cp .env.example .env
    ```
 
-   `STEAM_API_KEY` is only used by `/info steam`.
+   `TOKEN` is your Discord bot token. `STEAM_API_KEY` is only used by `/info steam`.
 
 3. Update `src/config.json` with your own emojis, role IDs, status messages and embed color. The emojis in the repo belong to the original server. `/info help` also has its own emoji ID in `src/commands/info/help.ts`.
 
 4. Run the bot:
 
    ```sh
-   npm run dev                # development, restarts on changes
-   npm run build && npm start # production
+   pnpm dev                 # development, restarts on changes
+   pnpm build && pnpm start # production
    ```
